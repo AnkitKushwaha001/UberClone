@@ -3,13 +3,13 @@ const mongoose = require('mongoose');
 const blacklistTokenScheam = new mongoose.Schema({
     token: {
         type: String,
-        require: true,
+        required: true,
         unique: true
     },
     createdAt: {
         type: Date,
         default: Date.now,
-        expires: 86400, // 24 hours in seconds
+        expires: 86400, // 24 hours in seconds - 86400, 2 minutes in seconds - 120
     }
 });
 
