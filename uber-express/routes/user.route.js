@@ -20,14 +20,6 @@ router.post('/login', [
 )
 
 router.get('/profile', authMiddleware.authUser, userController.getUserProfile);
-
 router.get('/logout', authMiddleware.authUser, userController.logoutUser);
-
-// router.post('/login', [
-//     body('email').isEmail().withMessage('Invalid Eamil'),
-//     body('password').isLength({min: 6}).withMessage('Password must be at least 6 characters long'),
-// ],
-//     userController.loginUser
-// )
 
 module.exports = router;
