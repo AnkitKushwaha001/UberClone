@@ -68,5 +68,5 @@ module.exports.logoutCaptain = async(req, res, next) => {
 
     await blacklistTokenModel.create({token});
     res.clearCookie('token');
-    res.status(200).json({message: 'Logout Successfully'});
+    res.status(200).json({message: 'Captain Logout Successfully'});
 }
