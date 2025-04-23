@@ -10,6 +10,14 @@
 
 // Copilot -> GitHub Copilot Chat
 
+
+// npm create vite@latest
+// project_name - uber-react
+// cd uber-react  
+//   npm install    
+//   npm run dev
+// install extensen - Simple React Snippets (rafce)
+
 const dotenv = require('dotenv');
 dotenv.config();
 const express = require("express");
