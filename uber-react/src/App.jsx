@@ -18,7 +18,6 @@ import UserSignup from './pages/UserSignup'
 import UserLogin from './pages/UserLogin'
 import CaptainLogin from './pages/CaptainLogin'
 import CaptainSignup from './pages/CaptainSignup'
-import { UserDataContext } from './context/UserContext'
 
 const App = () => {
   return (
