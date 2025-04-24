@@ -1,5 +1,7 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useContext, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import axios from "axios";
+import { UserDataContext } from "../context/UserContext";
 
 const UserSignup = () => {
   const [firstName, setFirstName] = useState("");
@@ -8,18 +10,29 @@ const UserSignup = () => {
   const [password, setPassword] = useState("");
   const [userData, setUserData] = useState({})
 
-  const submitHandler = (e) => {
+  const navigate = useNavigate();
+  const { user, setUser } = useContext(UserDataContext)
+
+  const submitHandler = async (e) => {
     e.preventDefault();
     
-    setUserData({
-        fullName: {
-            firstName: firstName,
-            lastName: lastName,
-        },
-        email: email,
-        password: password
-    })
-    console.log(userData);
+    const newUser = {
+      fullName: {
+          firstName: firstName,
+          lastName: lastName,
+      },
+      email: email,
+      password: password
+    }
+
+    const response = await axios.post(`${import.meta.env.VITE_BASE_URL}/users/register`, newUser)
+
+    if(response.status === 201) {
+      const data = response.data;
+      setUser(data.user);
+      localStorage.setItem('token', data.token)
+      navigate('/home');    
+    }
 
     setFirstName('');
     setLastName('');
@@ -103,7 +116,7 @@ const UserSignup = () => {
                 />
               </div>
               <button type="submit" className="btn btn-dark w-100 fw-medium">
-                Register
+                Create Account
               </button>
             </form>
             <p className="text-center mt-3">
