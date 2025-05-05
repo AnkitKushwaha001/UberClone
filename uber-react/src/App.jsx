@@ -8,6 +8,11 @@
 // chrome extension - Color Catcher
 // npm i axios (data fatching like apiCalls)
 
+// gsap -> npm i gsap
+// npm i @gsap/react
+
+// remix icon (through the github) -> npm install remixicon --save
+
 
 // install extensen - 1. Simple React Snippets, 2. react-simple-snippets (rafce) (not work)
 // ES7+ React/Redux/React-Native snippets (rafce) (work properly)
