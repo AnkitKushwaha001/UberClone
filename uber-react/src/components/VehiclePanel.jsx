@@ -6,7 +6,7 @@ const VehiclePanel = (props) => {
     <div>
         <h5 className="text-center" onClick={() => { 
                 props.setVehiclePanel(false); 
-            }} ><i className="ri-arrow-down-wide-line"></i></h5>
+            }} ><i className="text-body-tertiary ri-arrow-down-wide-line"></i></h5>
         <h3 className="mb-3">Choose a Vehicle</h3>
         <div onClick={() => {
             props.setconfirmRidPanel(true)

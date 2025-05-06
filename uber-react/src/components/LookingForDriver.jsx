@@ -5,7 +5,7 @@ const LookingForDriver = (props) => {
     <div>
         <h5 className="text-center" onClick={() => { 
                 props.setvehicleFound(false); 
-            }} ><i className="ri-arrow-down-wide-line"></i></h5>
+            }} ><i className="text-body-tertiary ri-arrow-down-wide-line"></i></h5>
         <h3 className="mb-3">Looking For a Driver</h3>
         <div>
             <div className='w-100 d-flex justify-content-center'>

@@ -161,7 +161,7 @@ const Home = () => {
               }}
               className="position-absolute end-0 me-4"
             >
-              <i className="ri-arrow-down-wide-line"></i>
+              <i className="text-body-tertiary ri-arrow-down-wide-line"></i>
             </h2>
             <h4>Find a trip</h4>
             <form

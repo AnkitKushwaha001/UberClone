@@ -1,13 +1,16 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
-const WaitingForDriver = (props) => {
+const Riding = () => {
   return (
-    <div>
-        <h5 className="text-center" onClick={() => { 
-                props.waitingForDriver(false); 
-            }} ><i className="text-body-tertiary ri-arrow-down-wide-line"></i></h5>
-        {/* <h3 className="mb-3">Wating For a Driver</h3> */}
-        <div>
+    <div className='vh-100'>
+        <Link to='/home' className='position-fixed bg-white d-flex justify-content-center fw-normal fs-1 rounded-5 end-0 me-2 mt-2 text-decoration-none text-black'>
+            <i className="px-2 ri-home-5-line"></i>
+        </Link>
+        <div className='h-50'>
+            <img className="img-fluid w-100 h-100 object-fit-cover" src="https://miro.medium.com/v2/resize:fit:1400/0*gwMx05pqII5hbfmX.gif" alt="" />
+        </div>
+        <div className='h-50 p-4'>
             <div className='w-100 d-flex justify-content-center'>
               <div className='w-50'>
                 <img className="w-100" src="https://www.pngplay.com/wp-content/uploads/8/Uber-PNG-Photos.png" alt="" />
@@ -19,13 +22,6 @@ const WaitingForDriver = (props) => {
               </div>
             </div>
             <div className='w-100 mt-2 mb-4'>
-                <div className='d-flex align-items-center gap-3 py-2 border-bottom'>
-                    <i className="fs-3 ri-map-pin-user-fill"></i>
-                    <div>
-                        <h5 className='mb-0'>562/11-A</h5>
-                        <p className='mb-0'>Kankariya Talab, Bhopal</p>
-                    </div>
-                </div>
                 <div className='d-flex align-items-center gap-3 py-2 border-bottom'>
                     <i className="fs-3 ri-map-pin-2-fill"></i>
                     <div>
@@ -41,9 +37,10 @@ const WaitingForDriver = (props) => {
                     </div>
                 </div>
             </div>
+            <button className='btn btn-success w-100'>Make a Payment</button>
         </div>
     </div>
   )
 }
 
-export default WaitingForDriver
+export default Riding
